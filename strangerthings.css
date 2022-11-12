@@ -40,3 +40,4 @@ a {color: white;	text-decoration: none; }
 .casts { flex-direction: column; }
 .monsterlist img{ display: flex; flex-direction: column; align-items: baseline; }
 .monsterlist p{ text-align: center; }
+
