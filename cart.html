@@ -11,64 +11,39 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-<link rel="stylesheet" href="header.css">
+<link rel="stylesheet" href="cart.css">
 <link rel = "icon" href = "STlogo.png" type = "image/x-icon">
 <style>
 	
 
 </style>
 </header>
-<body class="hero-anime">	
-  <div class="navigation-wrap bg-light start-header start-style">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <nav class="navbar navbar-expand-md navbar-light">
-          
-            <a class="navbar-brand" href="index.html" target="_blank"><img src="STlogo.png" alt=""></a>  
-            
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ml-auto py-4 py-md-0">
-                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
-                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Discounts</a>
-                    <a class="dropdown-item" href="#NewProduct">Announcement</a>
-                    <a class="dropdown-item" href="#">Sale</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                  </div>
-                </li>
-                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                  <a class="nav-link" href="story.html">Story</a>
-                </li>
-                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                  <a class="nav-link" href="merch.html">Merch</a>
-                </li>
-                </li>
-                  <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                  <a class="nav-link" href="Developer.html">Contact</a>
-                </li>
-                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                  <a class="nav-link" href="login.html">Login</a>
-                </li>
-                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                  <a class="nav-link" href="#">Add to Cart</a>
-                </li>
-              </ul>
-            </div>
-            
-          </nav>    
-        </div>
+<!-- Demo page craeted by https://github.com/petr-goca -->
+<header role="banner" aria-label="Heading">
+  <div class="header">
+    <div class="_cont">
+      <div class="shadow">
+        <a class="logo" title="Home">Add to Cart</a>
       </div>
+      <div class="mobile-menu">
+        <form action="/search" method="get" id="find">
+          <div>
+            <input type="text" name="q" id="find-input" class="find-input" placeholder="Search..." value="">
+            <button type="submit" title="Search" id="find-btn">Search</button>
+          </div>
+        </form>
+        <a id="customer_login_link" href="login.html" style="text-decoration: none;">Sign In</a>
+        <nav role="navigation" aria-label="Catalog">
+        
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <span id="nav-icon"></span>
     </div>
   </div>
-<!-- End of Header -->
-<!-- Home Page -->
-
+  
+</header>
 <section aria-label="Main content" role="main" class="product-detail">
   <div itemscope itemtype="http://schema.org/Product">
     <meta itemprop="url" content="http://html-koder-test.myshopify.com/products/tommy-hilfiger-t-shirt-new-york">
@@ -92,7 +67,7 @@
               </a>
             </div>
             <div class="big">
-              <span id="big-image" class="img" quickbeam="image" style="background-image: url('//cdn.shopify.com/s/files/1/1047/6452/products/product_1024x1024.png?v=1446769025')" data-src="//cdn.shopify.com/s/files/1/1047/6452/products/product_1024x1024.png?v=1446769025"></span>
+              <span id="big-image" class="img" quickbeam="image" style="background-image: url('tshirt1.jpg')"></span>
               <div id="banner-gallery" class="swipe">
                 <div class="swipe-wrap">
                   <div style="background-image: url('//cdn.shopify.com/s/files/1/1047/6452/products/product_large.png?v=1446769025')"></div>
@@ -111,13 +86,13 @@
             </div>
           </div>
           <div class="right-col">
-            <h1 itemprop="name">Tony Hunfinger T-Shirt New York</h1>
+            <h1 itemprop="name">Hellfire T-shirt</h1>
             <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
               <meta itemprop="priceCurrency" content="USD">
               <link itemprop="availability" href="http://schema.org/InStock">
               <div class="price-shipping">
                 <div class="price" id="price-preview" quickbeam="price" quickbeam-price="800">
-                  $800.00
+                  Php 800.00
                 </div>
                 <a>Free shipping</a>
               </div>
@@ -188,31 +163,31 @@
               <form id="AddToCartForm">
                 <select name="id" id="productSelect" quickbeam="product" class="product-single__variants">
                   <option  selected="selected"  data-sku="" value="7924994501">
-                    M / Blue - $800.00 USD
+                    M / Blue - Php 800.00
                   </option>
                   <option  data-sku="" value="7924995077">
-                    M / Red - $850.00 USD
+                    M / Red - Php 900.00
                   </option>
                   <option  data-sku="" value="7924994437">
-                    L / Blue - $850.00 USD
+                    L / Blue - Php 950.00
                   </option>
                   <option  data-sku="" value="7924994693">
-                    L / Yellow - $850.00 USD
+                    L / Yellow - Php 700.00
                   </option>
                   <option  data-sku="" value="7924995013">
-                    L / Red - $850.00 USD
+                    L / Red - Php 600.00
                   </option>
                   <option  data-sku="" value="7924994373">
-                    XL / Blue - $900.00 USD
+                    XL / Blue - Php 650.00
                   </option>
                   <option  data-sku="" value="7924994629">
-                    XL / Yellow - $850.00 USD
+                    XL / Yellow - Php 700.00
                   </option>
                   <option  data-sku="" value="7924830021">
-                    XXL / Blue - $950.00 USD
+                    XXL / Blue - Php 900.00
                   </option>
                   <option  data-sku="" value="7924994885">
-                    XXL / Red - $850.00 USD
+                    XXL / Red - Php 500.00
                   </option>
                 </select>
                 <div class="btn-and-quantity-wrap">
@@ -237,10 +212,10 @@
                 </div>
                 <div class="tab-slides">
                   <div id="tab-slide-1" itemprop="description"  class="slide active">
-                    We open source it for you https://github.com/greenwoodents/quickbeam.js if you want to use it on your ecommerce.
+                    Hellfire T-shirt Club inspired by the Stranger Things
                   </div>
                   <div id="tab-slide-2" class="slide">
-                    Tony Hunfinger
+                    Hellfire-Club
                   </div>
                 </div>
               </div>
@@ -552,10 +527,6 @@
 </div>
 
 <!-- Quickbeam cart end -->
-<br><br><br>
-<footer>
-	<center><img src="footer.png" style="width:100%; height: 5%;"></center>
-</footer>
 <!-- Java & Bootstrap -->
 <script type="text/javascript" src="header.js"></script>
 
