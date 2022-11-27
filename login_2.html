@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <body>
 
 <meta charset="UTF-8">
@@ -219,7 +219,8 @@ a:hover{
   background: rgba(87,198,255,.5);
 }
 </style>
-
+<header>
+</header>
 <body>
 <div id="login-button">
   <img src="https://dqcgrsy5v35b9.cloudfront.net/cruiseplanner/assets/img/icons/login-w-icon.png">
@@ -256,7 +257,30 @@ a:hover{
 </form>
 </div>
 
-<script type="text/javascript" src="login.js"></script>
+<script>
+$('#login-button').click(function(){
+  $('#login-button').fadeOut("slow",function(){
+    $("#container").fadeIn();
+    TweenMax.from("#container", .4, { scale: 0, ease:Sine.easeInOut});
+    TweenMax.to("#container", .4, { scale: 1, ease:Sine.easeInOut});
+  });
+});
+
+$(".close-btn").click(function(){
+  TweenMax.from("#container", .4, { scale: 1, ease:Sine.easeInOut});
+  TweenMax.to("#container", .4, { left:"0px", scale: 0, ease:Sine.easeInOut});
+  $("#container, #forgotten-container").fadeOut(800, function(){
+    $("#login-button").fadeIn(800);
+  });
+});
+
+/* Forgotten Password */
+$('#forgotten').click(function(){
+  $("#container").fadeOut(function(){
+    $("#forgotten-container").fadeIn();
+  });
+});
+</script>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
