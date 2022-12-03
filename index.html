@@ -1,109 +1,110 @@
 <!DOCTYPE html>
-<html  lang="en">
+<html>
 <head>
-
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-
-<title>Stranger Things</title>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-<link rel="stylesheet" href="header.css">
+	<title>Stranger Things</title>
 <link rel = "icon" href = "STlogo.png" type = "image/x-icon">
 <style>
-	.hoverNewProduct{
-		 width:50%;
-		 height: 50%;
-		 position: absolute;
-		 top: 239%;
-		 left: 25%;
-	}
+    *{
+        margin: 0;
+        padding: 0;
+    }
+        body {
+            background-color: #000;
+        }
 
-	.hoverNewProduct:hover {
-   transform: scale(1.3);
-}
+        a {
+        	color: white;
+        	text-decoration: none;
+            }
+
+        
+        .wrapper {
+            width: 400px;
+            height: 200px;
+            border-radius: 10px;
+            background-color: white;
+            opacity: 80%;
+            text-align:  center;
+            position: absolute;
+            top: 83%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: -3px -3px 9px, 3px 3px 7px rgba(0, 0, 0, 0.671);
+   
+
+        }
+        
+        .login-area{
+          
+            padding-top: 90px 60px;
+           
+        }
+        .wrapper input{
+            width: 300px;
+            margin-top: 20px;
+            background-color: transparent;
+             opacity: 100%;
+            text-align:  center;
+            outline: none;
+            padding: 10px;
+            font-size: 15px;
+            border-radius: 30px;
+            font-weight: bold;
+            border-color: white;
+            border-width: 3px;
+            box-shadow: 4px 4px darkred;
+
+        }
+ 
+        button {
+            width: 30%;
+             background-color: darkred;
+             color: white;
+             font-weight: bold;
+             padding: 14px 20px;
+             margin: 8px 0 8px;
+             cursor: pointer;
+             border-color: whitesmoke;
+             border-radius: 30px;
+             }
+
+       button:hover {
+              opacity: 0.8;
+           }
+        
 
 </style>
-</header>
-<body class="hero-anime">	
+</head>
 
-	<div class="navigation-wrap bg-light start-header start-style">
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<nav class="navbar navbar-expand-md navbar-light">
-					
-						<a class="navbar-brand" href="index.html" target="_blank"><img src="STlogo.png" alt=""></a>	
-						
-						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-							<span class="navbar-toggler-icon"></span>
-						</button>
-						
-						<div class="collapse navbar-collapse" id="navbarSupportedContent">
-							<ul class="navbar-nav ml-auto py-4 py-md-0">
-								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
-									<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
-									<div class="dropdown-menu">
-										<a class="dropdown-item" href="#">Discounts</a>
-										<a class="dropdown-item" href="#NewProduct">Announcement</a>
-										<a class="dropdown-item" href="#">Sale</a>
-										<a class="dropdown-item" href="#">Another action</a>
-									</div>
-								</li>
-								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-									<a class="nav-link" href="story.html">Story</a>
-								</li>
-								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-									<a class="nav-link" href="merch.html">Merch</a>
-								</li>
-								</li>
-									<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-									<a class="nav-link" href="Developer.html">Contact</a>
-								</li>
-								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-									<a class="nav-link" href="login.html">Login</a>
-								</li>
-								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-									<a class="nav-link" href="cart.html">Add to Cart</a>
-								</li>
-							</ul>
-						</div>
-						
-					</nav>		
-				</div>
-			</div>
-		</div>
-	</div>
+<body>
+   <video width= "100%" height ="100%" autoplay muted loop id="loginbackground" class="loginbackground">
+        <source src="loginvideobg.mp4" type="video/mp4">
+    </video>
 
-<!-- End of Header -->
-<!-- Home Page -->
-<img src="Home.png" class="picture1stPage">
-<img src="iconST2.png" class="titleST">
-<h6 style="position: absolute; top: 62%; left: 7%; color: white;"> When a young boy vanishes, a small town uncovers <br> a mystery involving secret experiments, terrifying <br>supernatural forces and one strange little girl.</h6>
+<form action="/loginpage.php" method="post">
 
-    <div class="video11">
-        <video width= "50%" height ="50%" autoplay muted loop id="elevenPower1">
-            <source src="elevenpower.mp4" type="video/mp4">
-        </video>
-  </div>
-<div id="NewProduct">
-<!-- New Product -->
-<img src="newPTop.png" style="width:100%; height: 50%;">
-<img src="newPBottom.png" class="hoverNewProduct">
-</div>
-<br><br><br>
-<footer>
-	<center><img src="footer.png" style="width:100%; height: 5%;"></center>
-</footer>
-<!-- Java & Bootstrap -->
-<script type="text/javascript" src="header.js"></script>
+    <div class= "wrapper">
+        <div class ="loginarea">
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+            <input type="email" placeholder="Email" required>
+     
+            <input type="password" placeholder="Password"  required>
+
+              <button type="submit"><a href="story.html">Login</a></button>
+     </div>
+    </div>
+</form>
+
+<script>
+
+</script>
+
+
+
 
 </body>
-</head></html>
+
+
+</div>
+    
+</html>
