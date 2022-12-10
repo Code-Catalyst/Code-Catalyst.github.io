@@ -2,6 +2,7 @@
 <html style="scroll-behavior: smooth;">
 <head>
 
+<script src="https://kit.fontawesome.com/d3ca04fc71.js" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -11,7 +12,10 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 <link rel="stylesheet" href="header.css">
-<link rel = "icon" href = "STlogo.png" type = "image/x-icon"> 
+
+<!-- custom js file link  -->
+   <script src="merch.js" defer></script>
+    
 <style>
 
 /* Footer ================================== */
@@ -142,20 +146,199 @@ ul {
 }
 
 /* Main ================================== */
+    body {background-color: white;}
+.back-video{position: absolute; right:0; bottom: 0; z-index: -1;}
+.category1{display: flex; justify-content: center; height:150px; width:1100px; background-color: white; margin:400px auto auto auto; }
+.whitebodybg{display: flex; justify-content:center; background-color: white; height:auto; width:auto; margin: auto;}
+.categories{font-size: 32px; color: black;}
+.products {display: flex; justify-content:center;}
+.products {flex-direction: row;}
+.productsimg{flex-basis: 20px; flex-direction: row; margin: 2px auto auto 10px;}
+.productsimg:hover img{cursor: pointer; opacity: 0.5; transition: 0.5s;}
+.productsimg i{cursor: pointer;}
+.productstext{text-align: left; font-size: 24px;}
+.category2{display: flex; justify-content: center; height:100px; width:700px; background-color: white; margin-top: 15px; margin:auto; }
+.category2 h1{color: black;}
+.category3{display: flex; justify-content: center; height:100px; width:1280px; background-color: white; margin:auto;}}
+.products .productsimg .eye {
+    margin-top: -32px;
+    margin-left: 270px;
+}
+.products .productsimg .cart {
+    margin-top: -24px;
+    margin-left: 270px;
+}
+.products-preview{
+    position: fixed;
+    top: 0; left: 0;
+    min-height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, .8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
 
-    body {background-color: #000;}
-    .back-video{position: absolute; right:0; bottom: 0; z-index: -1;}
-    .category1{display: flex; justify-content: center; height:200px; width:1100px; background-color: white; margin:400px auto auto auto; }
-    .whitebodybg{display: flex; justify-content:center; background-color: white; height:auto; width:auto; margin: auto;}
-    .categories{font-size: 32px; color: black;}
-    .products {display: flex; justify-content:center;}
-    .products {flex-direction: row;}
-    .productsimg{flex-basis: 20px; flex-direction: row; margin: 2px auto auto 10px;}
-    .productsimg:hover {cursor: pointer; opacity: 0.5; transition: 0.5s;}
-    .productstext{text-align: left;}
-    .category2{display: flex; justify-content: center; height:100px; width:500px; background-color: black; margin:auto;}
-    .category2 h1{color: white;}
-    .category3{display: flex; justify-content: center; height:100px; width:1280px; background-color: white; margin:auto;}}
+.products-preview .preview{
+    display: none;
+    padding: 2rem;
+    text-align: center;
+    background: #fff;
+    position:  relative;
+    margin: 2rem;
+    width: 58rem;
+    height: 28rem;
+}
+
+.products-preview .preview.active{
+    display: inline-block;
+
+} 
+
+.products-preview .preview img{
+    height: 23rem;
+    margin-top: 12px;
+    margin-left: -30rem;
+
+}
+
+.products-preview .preview .fa-times{
+    position: absolute;
+    top: 1rem; right: 1rem;
+    cursor: pointer;
+    color: #444;
+    font-size: 2rem;
+}
+
+.products-preview .preview .fa-times:hover{
+   color: #ca6d4f;
+}
+
+.products-preview .preview h5{
+    line-height: 2.5rem;
+    color: #444;
+    padding: .5rem 0;
+    font-size: 1.5rem;
+    margin-left: 26rem;
+    margin-top: -23.5rem;
+    
+}
+
+.products-preview .preview h6{
+    color: #444;
+    padding: .5rem 0;
+    font-size: 1rem;
+    margin-top: 18px;
+    margin-left: 98px;
+    
+}
+
+.products-preview .preview .button {
+    color: white;
+}
+
+button{
+    width: 40%;
+    height: 60px;
+    color: white;border: 2px solid #ca6d4f;
+    background-color: #ca6d4f;
+    margin-top: 8px;
+    margin-left: 300px;
+    cursor: pointer;
+    border-radius: 25px;
+    animation:shake 0.9s infinite;
+}
+
+@keyframes shake {
+    0%{
+        transform: translate(0px,0px) rotate(0deg);
+    }
+    25%{
+        transform: translate(1px,1px) rotate(1deg);
+    }
+    50%{
+        transform: translate(-1px,-1px) rotate(-1deg);
+    }
+    75%{
+        transform: translate(2px,-1px) rotate(2deg);
+    }
+    100%{
+        transform: translate(-1px,1px) rotate(-1deg);
+    }
+}
+
+button:hover {
+    opacity: 0.8;
+    background-color: #4797cb;
+    border: 2px solid #4797cb;
+    animation-play-state: paused;
+}
+
+@media(max-width: 991px){
+
+    html{
+        font-size: 55%;
+    }
+}
+
+@media(max-width: 768px){
+
+    .products-preview .preview img{
+        height: 20rem;
+    }
+}
+
+@media(max-width: 450px){
+
+    html{
+        font-size: 50%;
+    }
+}
+
+.products-preview .preview .tshirtdesc img{
+     display:flex;
+   width: 50%;
+   height: 50%;
+   margin-left: 418px;
+   margin-top: -1px;
+}
+.products-preview .preview .sweatshirtdesc img{
+     display:flex;
+   width: 50%;
+   height: 50%;
+   margin-left: 418px;
+   margin-top: -1px;
+}
+.products-preview .preview .hoodiedesc img{
+     display:flex;
+   width: 27%;
+   height: 27%;
+   margin-left: 418px;
+   margin-top: -3px;
+}
+
+.products-preview .preview .funkopopdesc img{
+     display:flex;
+   width: 30%;
+   height: 30%;
+   margin-left: 420px;
+}
+
+.products-preview .preview .mugdesc img{
+    display:flex;
+   width: 25%;
+   height: 25%;
+   margin-left: 420px;
+
+}
+
+.products-preview .preview .posterdesc img{
+    display:flex;
+   width: 35%;
+   height: 35%;
+   margin-left: 420px;
+}
+
 
 </style>
 </head>
@@ -168,7 +351,7 @@ ul {
                 <div class="col-12">
                     <nav class="navbar navbar-expand-md navbar-light">
                     
-                        <a class="navbar-brand" href="home.html" target="_blank"><img src="STlogo.png" alt=""></a>    
+                        <a class="navbar-brand" href="header.html" target="_blank"><img src="STlogo.png" alt=""></a>    
                         
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
@@ -179,10 +362,10 @@ ul {
                                 <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
                                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
                                     <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="home.html">Discounts</a>
-                                        <a class="dropdown-item" href="home.html">Announcement</a>
-                                        <a class="dropdown-item" href="home.html">Sale</a>
-                                        <a class="dropdown-item" href="home.html">Another action</a>
+                                        <a class="dropdown-item" href="index.html">Discounts</a>
+                                        <a class="dropdown-item" href="index.html">Announcement</a>
+                                        <a class="dropdown-item" href="index.html">Sale</a>
+                                        <a class="dropdown-item" href="index.html">Another action</a>
                                     </div>
                                 </li>
                                 <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
@@ -201,10 +384,10 @@ ul {
                                     <a class="nav-link" href="Developer.html">Contact</a>
                                 </li>
                                 <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                    <a class="nav-link" href="index.html">Login</a>
+                                    <a class="nav-link" href="login.html">Login</a>
                                 </li>
                                 <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                    <a class="nav-link" href="cart.html">Add to Cart</a>
+                                    <a class="nav-link" href="#">Add to Cart</a>
                                 </li>
                             </ul>
                         </div>
@@ -218,8 +401,8 @@ ul {
 <!-- End of Header -->
 
 <div class = "video"> 
-<video width ="100%" height= "120%" autoplay muted loop class ="back-video"> 
-    <source src="videoforproducts.mp4" type="video/mp4">
+<video width ="100%" height= "100%" autoplay muted loop class ="back-video"> 
+    <source src="login3.mp4" type="video/mp4">
         </video> 
  
 <div class = "category1">
@@ -229,197 +412,414 @@ ul {
 
 <div class = "whitebodybg">
     <div class = "products"> 
-        <div class = "productsimg">
+        <div class = "productsimg" data-name="p-1">
             <img src = "tshirt1.png">
-            <h3 class =productstext"> Hellfire T-shirt </h3>
-            <h3> ₱ 650 </h3>
-        </div>
-    </div>
-
-     <div class = "products"> 
-        <div class = "productsimg">
-            <img src = "tshirt2.png">
-            <h3 class =productstext"> Thunder Tee </h3>
-            <h3> ₱ 650 </h3>
-        </div>
+            <h5 class =productstext"> Hellfire x Metallica T-shirt <br> ₱ 650 </h5>
+        </div>   
     </div>
 
     <div class = "products"> 
-        <div class = "productsimg">
+        <div class = "productsimg" data-name="p-2">
+            <img src = "tshirt2.png">
+            <h5 class =productstext"> Thunder Tee <br> ₱ 650 </h5>
+        </div>   
+    </div>
+
+    <div class = "products"> 
+        <div class = "productsimg" data-name="p-3">
             <img src = "tshirt3.png">
-            <h3 class =productstext"> Surfer Boy Pizza </h3>
-            <h3> ₱ 650 </h3>
-        </div>
+            <h5 class =productstext"> Surfer Boy Pizza <br> ₱ 650 </h5>
+        </div>   
     </div>
 </div>
 
 <div class = "whitebodybg">
     <div class = "products"> 
-        <div class = "productsimg">
+        <div class = "productsimg" data-name="p-4">
             <img src = "tshirt4.png">
-            <h3 class =productstext"> The Hellfire Club </h3>
-            <h3> ₱ 650 </h3>
-        </div>
+            <h5 class =productstext"> The Hellfire Club <br> ₱ 650 </h5>
+        </div>   
     </div>
 
     <div class = "products"> 
-        <div class = "productsimg">
+        <div class = "productsimg" data-name="p-5">
             <img src = "tshirt5.png">
-            <h3 class =productstext"> Eleven Graphic Tee </h3>
-            <h3> ₱ 650 </h3>
-        </div>
+            <h5 class =productstext">Eleven Graphic Tee <br> ₱ 650 </h5>
+        </div>   
     </div>
 
     <div class = "products"> 
-        <div class = "productsimg">
+        <div class = "productsimg" data-name="p-6">
             <img src = "tshirt6.png">
-            <h3 class =productstext"> Thunder Tee </h3>
-            <h3> ₱ 650 </h3>
-        </div>
-    </div>  
+            <h5 class =productstext"> Thunder Tee <br> ₱ 650 </h5>
+        </div>   
+    </div>
 </div>
-<br>
+
+
 <div class = "category2"> 
     <h1 id="Hoodies">Sweatshirts & Hoodies</h1>
+    <br>
 </div>
-<br>
+
 <div class = "whitebodybg">
     <br>
-<div class = "products"> 
-        <div class = "productsimg">
+    <div class = "products"> 
+        <div class = "productsimg" data-name="p-7">
             <img src = "sweatshirt1.png">
-            <h3 class =productstext"> Vecna Sweatshirt </h3>
-            <h3> ₱ 1000 </h3>
-        </div>
-    </div>
-
-     <div class = "products"> 
-        <div class = "productsimg">
-            <img src = "sweatshirt2.png">
-            <h3 class =productstext"> The Dive Sweatshirt </h3>
-            <h3> ₱ 1000 </h3>
-        </div>
+            <h5 class =productstext"> Vecna Metal Sweatshirt <br> ₱ 1000 </h5>
+        </div>   
     </div>
 
     <div class = "products"> 
-        <div class = "productsimg">
+        <div class = "productsimg" data-name="p-8">
+            <img src = "sweatshirt2.png">
+            <h5 class =productstext"> The Dive Sweatshirt <br> ₱ 1000 </h5>
+        </div>   
+    </div>
+
+    <div class = "products"> 
+        <div class = "productsimg" data-name="p-9">
             <img src = "sweatshirt3.png">
-            <h3 class =productstext"> The Hellfire Club</h3>
-            <h3> ₱ 1000 </h3>
-        </div>
+            <h5 class =productstext"> The Hellfire Club Sweatshirt <br> ₱ 1000 </h5>
+        </div>   
     </div>
 </div>
 
+
 <div class = "whitebodybg">
+    <br>
     <div class = "products"> 
-        <div class = "productsimg">
+        <div class = "productsimg" data-name="p-10">
             <img src = "hoodie1.png">
-            <h3 class =productstext"> Hellfire x Metallica Hoodie </h3>
-            <h3> ₱ 1500 </h3>
-        </div>
+            <h5 class =productstext"> Hellfire x Metallica Hoodie <br> ₱ 1500 </h5>
+        </div>   
     </div>
 
     <div class = "products"> 
-        <div class = "productsimg">
+        <div class = "productsimg" data-name="p-11">
             <img src = "hoodie2.png">
-            <h3 class =productstext"> Creel Embroidery Hoodie </h3>
-            <h3> ₱ 1500 </h3>
-        </div>
+            <h5 class =productstext"> Creel Embroidery Hoodie <br> ₱ 1500 </h5>
+        </div>   
     </div>
 
     <div class = "products"> 
-        <div class = "productsimg">
+        <div class = "productsimg" data-name="p-12">
             <img src = "hoodie3.png">
-            <h3 class =productstext"> Dear Billy Unisex Hoodie </h3>
-            <h3> ₱ 1500 </h3>
-        </div>
+            <h5 class =productstext"> Dear Billy Hoodie <br> ₱ 1500 </h5>
+        </div>   
     </div>
-</div> 
+</div>
 
-    <div class = "category3"> 
+<div class = "category3"> 
     <br>   
     <h1 id="Collectibles"> Other Collectibles </h1>
 </div>
 
 <div class = "whitebodybg">
     <div class = "products"> 
-        <div class = "productsimg">
+        <div class = "productsimg" data-name="p-13">
             <img src = "funkopopmax.png">
-            <h3 class =productstext"> Max Funko Pop </h3>
-            <h3> ₱ 550 </h3>
-        </div>
+            <h5 class =productstext"> Max Funko Pop <br> ₱ 550 </h5> 
+        </div>   
     </div>
 
-     <div class = "products"> 
-        <div class = "productsimg">
+    <div class = "products"> 
+        <div class = "productsimg" data-name="p-14">
             <img src = "funkopopwill.png">
-            <h3 class =productstext"> Will Funko Pop </h3>
-            <h3> ₱ 550 </h3>
-        </div>
+            <h5 class =productstext"> Will Funko Pop <br> ₱ 550 </h5> 
+        </div>   
     </div>
 
     <div class = "products"> 
-        <div class = "productsimg">
+        <div class = "productsimg" data-name="p-15">
             <img src = "funkopopeleven.png">
-            <h3 class =productstext"> Eleven Funko Pop </h3>
-            <h3> ₱ 550 </h3>
-        </div>
+            <h5 class =productstext"> Eleven Funko Pop <br> ₱ 550 </h5>
+        </div>   
     </div>
 </div>
 
-<div class = "whitebodybg">
-    <div class = "products"> 
-        <div class = "productsimg">
+<div class ="whitebodybg">
+     <div class = "products"> 
+        <div class = "productsimg" data-name="p-16">
             <img src = "funkopopmike.png">
-            <h3 class =productstext"> Mike Funko Pop </h3>
-            <h3> ₱ 550 </h3>
-        </div>
+            <h5 class =productstext"> Mike Funko Pop <br> ₱ 550 </h5> 
+        </div>   
     </div>
 
     <div class = "products"> 
-        <div class = "productsimg">
+        <div class = "productsimg" data-name="p-17">
             <img src = "funkopoplucas.png">
-            <h3 class =productstext"> Lucas Funko Pop </h3>
-            <h3> ₱ 550 </h3>
-        </div>
+            <h5 class =productstext"> Lucas Funko Pop <br> ₱ 550 </h5>
+        </div>   
     </div>
 
     <div class = "products"> 
-        <div class = "productsimg">
+        <div class = "productsimg" data-name="p-18">
             <img src = "funkopopdustin.png">
-            <h3 class =productstext"> Dustin Funko Pop </h3>
-            <h3> ₱ 550 </h3>
-        </div>
-    </div>   
+            <h5 class =productstext"> Dustin Funko Pop <br> ₱ 550 </h5>
+        </div>   
+    </div>
 </div>
 
-<div class = "whitebodybg">
+<div class ="whitebodybg">
     <div class = "products"> 
-        <div class = "productsimg">
+        <div class = "productsimg" data-name="p-19">
             <img src = "mug1.png">
-            <h3 class =productstext"> Demogorgon Head Mug </h3>
-            <h3> ₱ 350 </h3>
-        </div>
+            <h5 class =productstext"> Demogorgon Head Mug <br> ₱ 350 </h5>
+        </div>   
     </div>
 
     <div class = "products"> 
-        <div class = "productsimg">
+        <div class = "productsimg" data-name="p-20">
             <img src = "mug2.png">
-            <h3 class =productstext"> The Demorgorgon Mug </h3>
-            <h3> ₱ 350 </h3>
-        </div>
+            <h5 class =productstext"> The Demorgorgon Mug <br> ₱ 350 </h5> 
+        </div>   
     </div>
 
     <div class = "products"> 
-        <div class = "productsimg">
+        <div class = "productsimg" data-name="p-21">
             <img src = "poster1.png">
-            <h3 class =productstext"> The Piggyback Poster </h3>
-            <h3> ₱ 400 </h3>
-            <br><br><br>
-        </div>
-    </div>   
+            <h5 class =productstext"> The Piggyback Poster <br> ₱ 400 </h5>
+        </div>   
+    </div>
 </div>
 
+<div class = products-preview>
+        <div class = "preview" data-target="p-1">
+            <i class="fa fa-times"></i> 
+            <img src = "tshirt1.png">
+            <h5 class ="productstext"> Hellfire x Metallica T-shirt <br> ₱ 650 </h5>
+            <button type = "submit"><a href="cart.html">add to cart </a></button>
+            <h6> product details </h6>
+            <div class= "tshirtdesc">
+                <img src = "tshirtdesc.png">
+            </div>
+        </div>  
+
+        <div class = "preview" data-target="p-2">
+            <i class="fa fa-times"></i> 
+            <img src = "tshirt2.png">
+            <h5 class ="productstext"> Thunder Tee <br> ₱ 650 </h5>
+            <button type = "submit"><a href="cart.html">add to cart </a></button>
+            <h6> product details </h6>
+            <div class= "tshirtdesc">
+                <img src = "tshirtdesc.png">
+            </div>
+        </div>  
+
+        <div class = "preview" data-target="p-3">
+            <i class="fa fa-times"></i> 
+            <img src = "tshirt3.png">
+            <h5 class ="productstext"> Surfer Boy Pizza <br> ₱ 650 </h5>
+            <button type = "submit"><a href="cart.html">add to cart </a></button>
+            <h6> product details </h6>
+            <div class= "tshirtdesc">
+                <img src = "tshirtdesc.png">
+            </div>
+        </div>  
+
+        <div class = "preview" data-target="p-4">
+            <i class="fa fa-times"></i> 
+            <img src = "tshirt4.png">
+            <h5 class ="productstext"> Hellfire x Metallica T-shirt <br> ₱ 650 </h5>
+            <button type = "submit"><a href="cart.html">add to cart </a></button>
+            <h6> product details </h6>
+            <div class= "tshirtdesc">
+                <img src = "tshirtdesc.png">
+            </div>
+        </div>  
+    
+        <div class = "preview" data-target="p-5">
+            <i class="fa fa-times"></i> 
+            <img src = "tshirt5.png">
+            <h5 class ="productstext"> Thunder Tee <br> ₱ 650 </h5>
+            <button type = "submit"><a href="cart.html">add to cart </a></button>
+            <h6> product details </h6>
+            <div class= "tshirtdesc">
+                <img src = "tshirtdesc.png">
+            </div>
+        </div>  
+   
+
+        <div class = "preview" data-target="p-6">
+            <i class="fa fa-times"></i> 
+            <img src = "tshirt6.png">
+            <h5 class ="productstext"> Surfer Boy Pizza <br> ₱ 650 </h5>
+            <button type = "submit"><a href="cart.html">add to cart </a></button>
+            <h6> product details </h6>
+            <div class= "tshirtdesc">
+                <img src = "tshirtdesc.png">
+            </div>
+        </div>  
+
+        <div class = "preview" data-target="p-7">
+            <i class="fa fa-times"></i> 
+            <img src = "sweatshirt1.png">
+            <h5 class ="productstext">Vecna Metal Sweatshirt <br> ₱ 1000 </h5>
+            <button type = "submit"><a href="cart.html">add to cart </a></button>
+            <h6> product details </h6>
+            <div class= "sweatshirtdesc">
+                <img src = "sweatshirtdesc.png">
+            </div>
+        </div>  
+
+        <div class = "preview" data-target="p-8">
+            <i class="fa fa-times"></i> 
+            <img src = "sweatshirt2.png">
+            <h5 class ="productstext"> The Dive Sweatshirt <br> ₱ 1000 </h5>
+            <button type = "submit"><a href="cart.html">add to cart </a></button>
+            <h6> product details </h6>
+            <div class= "sweatshirtdesc">
+                <img src = "sweatshirtdesc.png">
+            </div>
+        </div> 
+
+        <div class = "preview" data-target="p-9">
+            <i class="fa fa-times"></i> 
+            <img src = "sweatshirt3.png">
+            <h5 class ="productstext"> The Hellfire Club Sweatshirt <br> ₱ 1000 </h5>
+            <button type = "submit"><a href="cart.html">add to cart </a></button>
+            <h6> product details </h6>
+            <div class= "sweatshirtdesc">
+                <img src = "sweatshirtdesc.png">
+            </div>
+        </div> 
+
+        <div class = "preview" data-target="p-10">
+            <i class="fa fa-times"></i> 
+            <img src = "hoodie1.png">
+            <h5 class ="productstext"> Hellfire x Metallica Hoodie <br> ₱ 1500 </h5>
+            <button type = "submit"><a href="cart.html">add to cart </a></button>
+            <h6> product details </h6>
+            <div class= "hoodiedesc">
+                <img src = "hoodiedesc.png">
+            </div>
+        </div>
+        <div class = "preview" data-target="p-11">
+            <i class="fa fa-times"></i> 
+            <img src = "hoodie2.png">
+            <h5 class ="productstext"> Creel Embroidery Hoodie <br> ₱ 1500 </h5>
+            <button type = "submit"><a href="cart.html">add to cart </a></button>
+            <h6> product details </h6>
+            <div class= "hoodiedesc">
+                <img src = "hoodiedesc.png">
+            </div>
+        </div>
+        <div class = "preview" data-target="p-12">
+            <i class="fa fa-times"></i> 
+            <img src = "hoodie3.png">
+            <h5 class ="productstext"> Dear Billy Hoodie <br> ₱ 1500 </h5>
+            <button type = "submit"><a href="cart.html">add to cart </a></button>
+            <h6> product details </h6>
+            <div class= "hoodiedesc">
+                <img src = "hoodiedesc.png">
+            </div>
+        </div>
+
+        <div class = "preview" data-target="p-13">
+            <i class="fa fa-times"></i> 
+            <img src = "funkopopmax.png">
+            <h5 class ="productstext"> Max Funko Pop  <br> ₱ 550 </h5>
+            <button type = "submit"><a href="cart.html">add to cart </a></button>
+            <h6> product details </h6>
+            <div class= "funkopopdesc">
+                <img src = "funkopopdesc.png">
+            </div>
+        </div>  
+    
+        <div class = "preview" data-target="p-14">
+            <i class="fa fa-times"></i> 
+            <img src = "funkopopwill.png">
+            <h5 class ="productstext"> Will Funko Pop <br> ₱ 550 </h5>
+            <button type = "submit"><a href="cart.html">add to cart </a></button>
+            <h6> product details </h6>
+            <div class= "funkopopdesc">
+                <img src = "funkopopdesc.png">
+            </div>
+        </div>  
+    
+        <div class = "preview" data-target="p-15">
+            <i class="fa fa-times"></i> 
+            <img src = "funkopopeleven.png">
+            <h5 class ="productstext"> Eleven Funko Pop <br> ₱ 550 </h5>
+            <button type = "submit"><a href="cart.html">add to cart </a></button>
+            <h6> product details </h6>
+            <div class= "funkopopdesc">
+                <img src = "funkopopdesc.png">
+            </div>
+        </div>
+
+        <div class = "preview" data-target="p-16">
+            <i class="fa fa-times"></i> 
+            <img src = "funkopopmike.png">
+            <h5 class ="productstext"> Mike Funko Pop <br> ₱ 550 </h5>
+            <button type = "submit"><a href="cart.html">add to cart </a></button>
+            <h6> product details </h6>
+            <div class= "funkopopdesc">
+                <img src = "funkopopdesc.png">
+            </div>
+        </div>  
+    
+        <div class = "preview" data-target="p-17">
+            <i class="fa fa-times"></i> 
+            <img src = "funkopoplucas.png">
+            <h5 class ="productstext"> Lucas Funko Pop <br> ₱ 550 </h5>
+            <button type = "submit"><a href="cart.html">add to cart </a></button>
+            <h6> product details </h6>
+            <div class= "funkopopdesc">
+                <img src = "funkopopdesc.png">
+            </div>
+        </div>  
+
+
+        <div class = "preview" data-target="p-18">
+            <i class="fa fa-times"></i> 
+            <img src = "funkopopdustin.png">
+            <h5 class ="productstext"> Dustin Funko Pop <br> ₱ 550 </h5>
+            <button type = "submit"><a href="cart.html">add to cart </a></button>
+            <h6> product details </h6>
+            <div class= "funkopopdesc">
+                <img src = "funkopopdesc.png">
+            </div>
+        </div>  
+
+        <div class = "preview " data-target="p-19">
+            <i class="fa fa-times"></i> 
+            <img src = "mug1.png">
+            <h5 class ="productstext"> Demogorgon Head Mug <br> ₱ 350 </h5>
+            <button type = "submit"><a href="cart.html">add to cart </a></button>
+            <h6> product details </h6>
+            <div class= "mugdesc">
+                <img src = "mugdesc.png">
+            </div>
+        </div>  
+
+        <div class = "preview" data-target="p-20">
+            <i class="fa fa-times"></i> 
+            <img src = "mug2.png">
+            <h5 class ="productstext"> The Demorgorgon Mug <br> ₱ 350 </h5>
+            <button type = "submit"><a href="cart.html">add to cart </a></button>
+            <h6> product details </h6>
+            <div class= "mugdesc">
+                <img src = "mugdesc.png">
+            </div>
+        </div>  
+    
+
+        <div class = "preview" data-target="p-21">
+            <i class="fa fa-times"></i> 
+            <img src = "poster1.png">
+            <h5 class ="productstext"> The Piggyback Poster <br> ₱ 400 </h5>
+            <button type = "submit"><a href="cart.html">add to cart </a></button>
+            <h6> product details </h6>
+            <div class= "posterdesc">
+                <img src = "posterdesc.png">
+            </div>
+        </div>
+</div>
+
+<br><br><br>
 <footer class="footer-section">
         <div class="container">
             <div class="footer-cta pt-5 pb-5">
@@ -518,6 +918,7 @@ ul {
             </div>
         </div>
     </footer>
+
 <!-- Java & Bootstrap -->
 <script type="text/javascript" src="header.js"></script>
 
