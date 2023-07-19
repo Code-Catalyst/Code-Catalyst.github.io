@@ -1,0 +1,168 @@
+.container{
+    width: 90%;
+}
+
+.config{
+    background-color: var(--color-content-card);
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: var(--color-container-shadow);
+}
+
+h1{
+    color: var(--color-content-text);
+    font-size: 36px;
+    font-weight: bold;
+    padding: 20px 0px 10px 0px;
+    margin: 0px;
+}
+
+h2{
+    color: var(--color-content-text);
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0px 5px !important;
+    margin-bottom: 5px;
+}
+
+span{
+    color: #D03A36;
+    font-size: 14px;
+}
+
+.textbox{
+    padding: 0px 10px;
+}
+
+.column2{
+    margin-left: 0;
+}
+
+input, select{
+    font-size: 16px;
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 15px;
+    border: 1px solid var(--color-content-outline);
+    color: var(--color-content-text);
+    background-color: var(--color-content-element);
+    box-shadow: var(--color-element-shadow);
+}
+
+select{
+    cursor: pointer;
+}
+
+textarea{
+    font-size: 16px;
+    width: 100%;
+    height: 303px;
+    padding: 10px 20px !important;
+    margin-bottom: 10px;
+    display: inline-block;
+    border-radius: 15px;
+    border: 1px solid var(--color-content-outline);
+    resize: none;
+    color: var(--color-content-text);
+    background-color: var(--color-content-element);
+    box-shadow: var(--color-element-shadow);
+}
+
+input[type="text"]{
+    border: 1px solid var(--color-content-outline);
+    color: var(--color-content-text);
+    background-color: var(--color-content-element);
+    border-radius: 15px;
+}
+
+input[type="datetime-local"]{
+    border: 1px solid var(--color-content-outline);
+    color: var(--color-content-text);
+    background-color: var(--color-content-element);
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+input[type="file"]{
+    border: 1px solid var(--color-content-outline);
+    color: var(--color-content-text);
+    background-color: var(--color-content-element);
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+input[type="datetime-local"]::-webkit-calendar-picker-indicator{
+    color: blue;
+}
+  
+input[type="text"]:focus, input[type="datetime-local"]:focus, select:focus, textarea:focus{
+    outline: none;
+    border: 1px solid var(--color-content-text);
+}
+  
+.cover{
+    width: 100%;
+    background-color: var(--color-content-element);
+    border-radius: 15px;
+    height: 135px;
+    margin-bottom: 15px;
+    padding: 0;
+}
+
+.photo{
+    width: 100%;
+    background-color: var(--color-content-element);
+    border-radius: 15px;
+    height: 303px;
+    margin-bottom: 15px;
+    padding: 0;
+}
+
+.buttons{
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post-menu{
+    position: relative;
+    display: inline-block;
+    padding: 0px;
+}
+  
+.post-menu-content{
+    border-radius: 30px;
+    display: none;
+    position: absolute;
+    background-color: #5D2BA0;
+    width: 100%;
+    right: 0%;
+    bottom: 0%;
+}
+  
+.post-menu-content a{
+    color: #f2f2f2;
+    padding: 12px 0px;
+    text-decoration: none;
+    display: block;
+}
+  
+.post-menu-content a:hover{
+    color: #f2f2f2;
+    transform: scale(115%);
+    transition: 0.2s;
+}
+  
+.post-menu.active .post-menu-content{
+    display: block;
+}
+  
+.post-menu-content .no-hover{
+    pointer-events: none;
+    background-color: #50208F;
+    border-radius: 26px;
+}
+
+.popUpContainer input[type='datetime-local']{
+    font-size: 16px;
+}

@@ -1,0 +1,31 @@
+#create-post {
+    display: flex;
+}
+
+#create-post.createNot {
+    display: none;
+}
+
+#drafts {
+    display: flex;
+}
+
+#drafts.createNot {
+    display: none;
+}
+
+#schedules {
+    display: flex;
+}
+
+#schedules.createNot {
+    display: none;
+}
+
+.back{
+    color: var(--color-content-text);
+}
+
+.back:hover{
+    opacity: 50%;
+}

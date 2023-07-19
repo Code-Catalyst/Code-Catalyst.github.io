@@ -1,0 +1,213 @@
+:root[data-theme="light"] {
+    --not-active-text-color: #999;
+    --filter-default: invert(0%);
+}
+
+:root[data-theme="dark"] {
+    --not-active-text-color: #808080;
+    --filter-default: invert(100%);
+}
+
+html {
+
+}
+
+.form-control {
+    background-color: var(--color-content-element)!important;
+    border: none!important;
+    border-radius: 15px!important;
+    line-height: 1.88!important;
+}
+
+.bs-searchbox .form-control {
+    border: 1px solid #ccc!important;
+    border-radius: 15px!important;
+    box-shadow: none!important;
+}
+
+.bootstrap-select.form-control {
+    border-radius: 15px!important;
+}
+
+.form-control:focus {
+    outline: none!important;
+}
+
+.bootstrap-select button{
+    border-radius: 15px!important;
+    background-color: #FFF!important;
+    border: none!important;
+    box-shadow: none!important;
+}
+
+input:not(.form-check-input) {
+    margin-bottom: 5px!important;
+    padding: 6px 12px!important;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+    color: var(--color-content-text);
+    background-color: var(--color-body);
+}
+
+#add-event-container form #no-code{
+    pointer-events: none;
+}
+
+.req{
+    font-size: 14px;
+    color: #dc3545;
+}
+
+.dropdown-menu.show{
+    margin-left: -3px;
+}
+
+.inner{
+    max-height: 130px;
+    overflow-y: auto;
+}
+
+.bootstrap-select {
+    display: inline-flex!important;
+    border-radius: 10px!important;
+    box-shadow: 0 4px 20px -6px var(--color-shadow)!important;
+}
+
+.form-control{
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.16)!important;
+}
+
+.tooltip-popup {
+    position: absolute;
+    display: flex;
+    text-align: start;
+    background-color: #FFF;
+    color: var(--not-active-text-color);
+    white-space: nowrap;
+    padding: 20px;
+    border-radius: 15px;
+    transform: translateY(-85%);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease;
+    font-weight: 100;
+    pointer-events: none;
+    box-shadow: 0px 0px 10px 0 var(--shadow-color)!important;
+    width: 320px;
+}
+
+.tooltip-popup::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    border: 15px solid;
+    border-color: #fff #0000 #0000 #0000;
+}
+
+.tooltip-popup .tooltipText i {
+    font-size: 24px;
+    margin-top: -5px;
+    padding: 0!important;
+    visibility: hidden;
+}
+
+.tooltip-popup .tooltipText {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+#save-btn:hover .tooltip-popup, #eventSaveBtn:hover .tooltip-popup, #categorySaveBtn:hover .tooltip-popup{
+    visibility: visible;
+    opacity: 1;
+}
+
+#criteriaSaveBtn:hover .tooltip-popup{
+    visibility: visible;
+    opacity: 1;
+}
+
+#eventSaveBtn .tooltip-popup {
+    transform: translateY(-130%);
+    width: 100%;
+}
+
+.disable {
+    cursor: not-allowed;
+    color: var(--not-active-text-color);
+}
+
+.overall-included {
+    height: 42.08px;
+    display: flex;
+    align-items: center;
+    background-color: red;
+    width: 100%;
+    margin: 10px 0;
+    gap: 10px;
+    background-color: transparent!important;
+    box-shadow: none!important;
+    user-select: none;
+}
+
+.overall-included label, .overall-included input[type="checkbox"]{
+    margin: 0!important;
+}
+
+.overall-included input[type="checkbox"]{
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
+}
+
+.overall-included input[type="checkbox"] {
+    -webkit-appearance: none; /* Remove the default checkbox appearance in webkit-based browsers */
+    -moz-appearance: none; /* Remove the default checkbox appearance in Firefox */
+    appearance: none; /* Remove the default checkbox appearance in other browsers */
+    border-radius: 15px;
+    position: relative;
+    outline: none;
+    cursor: pointer;
+    background-color: var(--color-content-element);
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.16)!important;
+}
+
+.overall-included input[type="checkbox"]:checked::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 14px;
+    height: 15.5px;
+    border-radius: 15px;
+    background-color: var(--default-primary-action-color); /* Change the color of the checkmark */
+}
+  
+  /* Additional styles for the unchecked state */
+.overall-included input[type="checkbox"]::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+}
+  
+
+input.form-control, #display-code, .overall-included {
+    height: 45px;
+}
+
+.tou-desc {
+    height: 245px;
+}
+
+select.selectpicker {
+    display: block!important;
+}

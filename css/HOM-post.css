@@ -1,0 +1,88 @@
+.back{
+    color: var(--color-content-text);
+    font-size: 50px;
+    padding-top: 5px;
+}
+
+.back:hover{
+    font-size: 50px;
+    opacity: 50%;
+}
+
+.post-date{
+    font-size: 12px;
+    font-style: italic;
+    margin-bottom: 0;
+    color: var(--color-content-text);
+}
+
+.post-title{
+    font-size: 28px;
+    font-weight: bold;
+    vertical-align: middle;
+    color: var(--color-content-text);
+    margin: 20px 0 0 0;
+    border-bottom: 3px solid var(--color-content-line);
+}
+
+.post-description{
+    margin-top: 20px;
+    text-align: justify;
+    color: var(--color-content-text);
+    word-wrap: break-word;
+}
+
+.post-tag{
+    color: whitesmoke;
+    border-radius: 20px;
+    width: 100px;
+    text-align: center;
+    margin: 10px 0 0 10px;
+    font-weight: 300;
+    vertical-align: middle;
+}
+
+.SC{
+    background-color: var(--color-sc);
+}
+
+.ACAP{
+    background-color: var(--color-acap);
+}
+
+.AECES{
+    background-color: var(--color-aeces);
+}
+
+.ELITE{
+    background-color: var(--color-elite);
+}
+
+.GIVE{
+    background-color: var(--color-give);
+}
+
+.JEHRA{
+    background-color: var(--color-jehra);
+}
+
+.JMAP{
+    background-color: var(--color-jmap);
+}
+
+.JPIA{
+    background-color: var(--color-jpia);
+}
+
+.PIIE{
+    background-color: var(--color-piie);
+}
+
+.post-photo{
+    display: block;
+    margin: 10px auto;
+    padding: 0px;
+    width: 55%;
+    border-radius: 10px;
+    object-fit:cover;
+}

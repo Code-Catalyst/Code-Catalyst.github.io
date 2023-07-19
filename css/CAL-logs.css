@@ -1,0 +1,333 @@
+.small-button{ 
+  position: relative;
+  margin-top: -50px;
+  margin-left: 50px;
+}
+
+.table {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+thead {
+  color: var(--color-body);
+}
+
+td  {
+  padding: 50px;
+  color: var(--color-content-text);
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: var(--color-content-element); /* Set the background color for odd rows */
+}
+
+.table-striped tbody tr:nth-of-type(even) {
+  background-color: var(--color-content-outline); /* Set the background color for even rows */
+}
+
+.container {
+  position: relative;
+}
+
+.section, .sortable {
+  user-select: none;
+}
+
+/* Filter Customization  */
+
+.pill-all {
+  display: inline-block;
+  border-radius: 50px;
+  padding: 0px 15px;
+  background-color: #6c757d;
+  margin-right: 5px;
+  color: white;
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+.pill-sc {
+  display: inline-block;
+  border-radius: 50px;
+  padding: 0px 15px;
+  background-color: var(--color-sc);
+  margin-right: 5px;
+  color: white;
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+.pill-acap {
+  display: inline-block;
+  border-radius: 50px;
+  padding: 0px 15px;
+  background-color: var(--color-acap);
+  margin-right: 5px;
+  color: white;
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+.pill-aeces {
+  display: inline-block;
+  border-radius: 50px;
+  padding: 0px 15px;
+  background-color: var(--color-aeces);
+  margin-right: 5px;
+  color: white;
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+.pill-elite {
+  display: inline-block;
+  border-radius: 50px;
+  padding: 0px 15px;
+  background-color: var(--color-elite);
+  margin-right: 5px;
+  color: white;
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+.pill-give {
+  display: inline-block;
+  border-radius: 50px;
+  padding: 0px 15px;
+  background-color: var(--color-give);
+  margin-right: 5px;
+  color: white;
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+.pill-jehra {
+  display: inline-block;
+  border-radius: 50px;
+  padding: 0px 15px;
+  background-color: var(--color-jehra);
+  margin-right: 5px;
+  color: white;
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+.pill-jmap {
+  display: inline-block;
+  border-radius: 50px;
+  padding: 0px 15px;
+  background-color: var(--color-jmap);
+  margin-right: 5px;
+  color: white;
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+.pill-jpia {
+  display: inline-block;
+  border-radius: 50px;
+  padding: 0px 15px;
+  background-color: var(--color-jpia);
+  margin-right: 5px;
+  color: white;
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+.pill-piie {
+  display: inline-block;
+  border-radius: 50px;
+  padding: 0px 15px;
+  background-color: var(--color-piie);
+  margin-right: 5px;
+  color: white;
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+.form-check:not(.event-type) {
+  display: flex;
+  align-items: center;
+}
+
+.form-check-input:not(.event-type) {
+  margin-right: 10px;
+}
+
+.accordion-item {
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  border-radius: 0;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.form-check-label {
+  font-size: 14px;
+}
+
+.accordion-button:not(.collapsed) {
+  border-bottom: 2px solid black;
+  border-radius: 0;
+  background-color: transparent;
+  color: #000;
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-color: transparent;
+}
+
+.accordion-button:not(.collapsed)::before {
+  color: #000;
+}
+
+#no-results-row {
+  text-align: center;
+  font-style: italic;
+  color: gray;
+}
+
+#adminCheckboxes {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+#adminCheckboxes::-webkit-scrollbar {
+  height: 5px;
+  width: 5px;
+  border-radius: 10px;
+}
+
+/* Mini Calendar */
+
+.calendar-input-container {
+  position: relative;
+}
+
+#miniCalendarContainer {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  max-width: 375px;
+  z-index: 999;
+  height: auto;
+}
+
+#calendar-icon {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  right: 20px; 
+  transform: translateY(-50%);
+  font-size: 1.5em;
+  cursor: pointer;
+  color: var(--color-content-text) !important;
+}
+
+#search-icon {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-45%);
+  font-size: 1.5em;
+  color: var(--color-content-text) !important;
+}
+
+.search-input-container {
+  position: relative;
+  display: inline-block;
+}
+
+#miniCalendar {
+  width: 300px;
+}
+
+#miniCalendar .td, #miniCalendar .th, #miniCalendar .tr {
+  padding-bottom: 100px;
+}
+
+#miniCalendarThead {
+  color: var(--color-content-text);
+}
+
+#miniCalendarThead .sortable {
+  z-index: 9999;
+}
+
+#miniCalendarTable, #miniCalendarThead {
+  text-align: center;
+}
+
+#calendarElement {
+  height: 450px;
+  user-select: none;
+}
+
+#miniNextButton {
+  margin-left: 40px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+#miniPreviousButton {
+  font-size: 25px;
+  cursor: pointer;
+} 
+
+#miniCalendar td, #miniCalendar th {
+  border-radius: 50px;
+  padding: 5px;
+}
+
+#miniCalendarTable td.mini-active {
+  background-color: lightgray;
+  color: lightcoral;
+}  
+
+.mini-current-day.mini-active {
+  background-color: lightgray;
+  color: lightcoral;
+}
+
+input:not(.form-check-input) {
+  margin-bottom: 0px!important;
+}
+
+@media (max-width: 575.98px) {
+  .below {
+    left: 0 !important;
+    right: 0 !important;
+  }
+
+  #calendarElement {
+    height: 420px;
+    user-select: none;
+  }
+
+  @media (max-width: 474px) {
+    #miniCalendar {
+      width: 250px;
+    }
+  }
+
+  #miniNextButton {
+    margin-left: 25px;
+    font-size: 25px;
+    cursor: pointer;
+  }
+  
+  #miniPreviousButton {
+    font-size: 25px;
+    cursor: pointer;
+  }
+}
